@@ -56,7 +56,7 @@ fi
 #Step 2
 echo -e "\n${yellowColour}2.${emdColour}${greenColour}Downloading Xammp.${endColour}"
 
-wget https://sourceforge.net/projects/xampp/files/XAMPP%20Linux/8.1.6/xampp-linux-x64-8.1.6-0-installer.run/download -O xampp.run --no-check-certificate --progress=bar:force 2>&1 | progressfilt
+wget https://sourceforge.net/projects/xampp/files/XAMPP%20Linux/7.4.29/xampp-linux-x64-7.4.29-1-installer.run/download -O xampp.run --no-check-certificate --progress=bar:force 2>&1 | progressfilt
 
 #Step 3
 echo -e "\n${yellowColour}3.${emdColour}${greenColour}executing the file.${endColour}"
