@@ -44,12 +44,12 @@ read os
 if [ $os = c ];
 then
 	echo  -e "CentOS selected downloading packeges."
-	yum install nano wget -y 2 > /dev/null
+	yum install nano wget net-tools -y 2 > /dev/null
 
 	if [ $os = u ];
 	then
 		echo -e "Ubuntu selected downloading packeges"
-		apt-get install nano wget -y 2 > /dev/null
+		apt-get install nano wget net-tools -y 2 > /dev/null
 	fi
 fi
 
