@@ -61,7 +61,7 @@ wget https://sourceforge.net/projects/xampp/files/XAMPP%20Linux/7.4.29/xampp-lin
 #Step 3
 echo -e "\n${yellowColour}3.${emdColour}${greenColour}executing the file.${endColour}"
 chmod 755 xampp.run
-./xampp.run
+./xampp.run --mode unattended --unattendedmodeui unattendedmodeui
 
 #Step 4
 cat finish_instalation
