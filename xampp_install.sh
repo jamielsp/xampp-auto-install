@@ -41,22 +41,23 @@ echo -e "\n${yellowColour}1.${emdColour}${greenColour}Installing requeriments.${
 echo -e "Which System u use \n${purpleColour}c (CentOS)${endColour} / ${purpleColour}u {Ubuntu}${endColour}  ?"
 read os
 
-if [ $os = c ];
-then
-	echo  -e "CentOS selected downloading packeges."
-	yum install nano wget net-tools -y 2 > /dev/null
+if [ $os = c ]; then
+        echo  -e "CentOS selected downloading packeges."
+        yum install nano wget net-tools -y 2 > /dev/null
 
-	if [ $os = u ];
-	then
-		echo -e "Ubuntu selected downloading packeges"
-		apt-get install nano wget net-tools -y 2 > /dev/null
-	fi
+elif [ $os = u ]; then
+        echo -e "Ubuntu selected downloading packeges"
+        apt-get install nano wget net-tools -y
+else
+        echo -e "${redColour}Invalid option. Exiting...${endColour}"
+        exit 1
+
 fi
 
 #Step 2
 echo -e "\n${yellowColour}2.${emdColour}${greenColour}Downloading Xammp.${endColour}"
 
-wget https://sourceforge.net/projects/xampp/files/XAMPP%20Linux/7.4.29/xampp-linux-x64-7.4.29-1-installer.run/download -O xampp.run --no-check-certificate --progress=bar:force 2>&1 | progressfilt
+wget https://sourceforge.net/projects/xampp/files/XAMPP%20Linux/7.4.29/xampp-linux-x64-7.4.29-1-installer.run/download -O xampp.run --no-check-certificate --progress=bar:force 2>&1 >
 
 #Step 3
 echo -e "\n${yellowColour}3.${emdColour}${greenColour}executing the file.${endColour}"
@@ -65,3 +66,4 @@ chmod 755 xampp.run
 
 #Step 4
 cat finish_instalation
+
